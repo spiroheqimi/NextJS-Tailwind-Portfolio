@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {  // To add custom colors we extend a variable and then assing its Hexcode into CSS file
       colors: {
-        "primary-color": "var(--primary-color)",
+        "background-color": "var(--background-color)",
         "secondary-color": "var(--secondary-color)",
       },
     },

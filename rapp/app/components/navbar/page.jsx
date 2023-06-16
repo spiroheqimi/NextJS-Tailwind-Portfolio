@@ -13,7 +13,7 @@ export default function Navbar() {
   let [open,setOpen] = useState(false);
 
   return (
-    <div className="md:px-20 m-0 px-10 py-6 bg-slate-900">
+    <div className="md:px-20 m-0 px-10 py-6 bg-background-color">
       <div className=" md:flex items-center justify-between">
         <div className="flex justify-between w-full">
           <a href="/" className="md:text-3xl text-2xl text-white cursor-pointer"> Logo </a>
