@@ -6,8 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,mdx}',
   ],
   theme: {
-    extend: {
-    
+    extend: {  // To add custom colors we extend a variable and then assing its Hexcode into CSS file
+      colors: {
+        "primary-color": "var(--primary-color)",
+        "secondary-color": "var(--secondary-color)",
+      },
     },
   },
   plugins: [],
