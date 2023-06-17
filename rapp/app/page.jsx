@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import spiro from './public/SpiroHeqimi.png'
+/* import Image from 'next/image'
+import spiro from './public/SpiroHeqimi.png' */
 
 export default function Home() {
   return (
