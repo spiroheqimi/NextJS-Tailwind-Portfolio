@@ -1,6 +1,7 @@
 import Navbar from './components/navbar/page'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Footer from './components/footer/page'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <Navbar/>
         {children}
-{/*         <Footer/> */}
+        <Footer/>
       </body>
     </html>
   )
