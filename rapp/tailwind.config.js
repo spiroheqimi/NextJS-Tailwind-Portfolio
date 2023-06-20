@@ -11,6 +11,9 @@ module.exports = {
         "background-color": "var(--background-color)",
         "secondary-color": "var(--secondary-color)",
       },
+      screens:{
+        "sm" : "400px"
+      },
     },
   },
   plugins: [],
