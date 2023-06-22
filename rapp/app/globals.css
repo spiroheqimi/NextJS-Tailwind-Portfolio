@@ -12,3 +12,7 @@ ion-icon {
   color: white;
   font-size: 40px;
 }
+
+ion-icon:hover {
+  scale: 115%;
+}

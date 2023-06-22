@@ -6,23 +6,23 @@ export default function Home() {
   let projects = [
     {
       id: 1,
-      name: "Project1",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "Project 1",
+      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
     {
       id: 2,
-      name: "Project2",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "Project 2",
+      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
     {
       id: 3,
-      name: "Project3",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "Project 3",
+      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
     {
       id: 4,
-      name: "Project4",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "Project 4",
+      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
   ];
 
@@ -35,7 +35,8 @@ export default function Home() {
           <div className="xl:w-3/5 w-full flex flex-col justify-center text-left text-white lg:pl-2 ">
             <h1 className="md:text-2xl text-lg"> Hello, My name is Spiro </h1>
             <h1 className="md:text-3xl text-xl">
-              I am a<span className="text-violet-600"> Front-End Developer</span>
+              I am a
+              <span className="text-violet-600"> Front-End Developer</span>
             </h1>
 
             <p className="md:text-md text-sm pt-6">
@@ -46,12 +47,12 @@ export default function Home() {
             </p>
 
             <div className="flex items-start gap-5 py-4">
-              <button>
+              <button >
                 <Link href="https://github.com/spiroheqimi">
                   <ion-icon name="logo-github"></ion-icon>
                 </Link>
               </button>
-              <button>
+              <button >
                 <Link href="https://www.linkedin.com/in/spiro-heqimi-b80295236/">
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </Link>
@@ -65,7 +66,13 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center xl:w-2/5 max-xl:hidden xl:mx-10">
-            <Image className="rounded-xl " src={projectimg} width={800} height={800} alt="project 1"/>
+            <Image
+              className="rounded-xl "
+              src={projectimg}
+              width={800}
+              height={800}
+              alt="project 1"
+            />
           </div>
         </div>
       </main>
@@ -86,12 +93,11 @@ export default function Home() {
                     height={500}
                     alt={proj.name}
                   />
-                  <div className="h-full flex flex-col justify-between gap-5 p-5">
+                  <div className="h-full flex flex-col justify-between items-center gap-5 p-5">
                     <h1> {proj.name} </h1>
                     <p> {proj.par} </p>
-                    <button className="bg-violet-600 rounded-3xl w-28 py-2 self-center text-white">
-                      {" "}
-                      Visit{" "}
+                    <button className="bg-violet-600 rounded-3xl w-24 py-2 text-white">
+                      Visit
                     </button>
                   </div>
                 </div>
@@ -109,8 +115,8 @@ export default function Home() {
  * I want to add programming languages
  * I want to add project cards
  * Download CV button needs onclick donwload
- *
- *
+ * I want to add a button "View more" and it will show the rest of the projects if any | maybe i need Promises for that 
+ * 
  *
  *
  *
