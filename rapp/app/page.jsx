@@ -1,6 +1,8 @@
+'use client'
 import Link from "next/link";
 import Image from "next/image";
 import projectimg from "./public/project-img.jpg";
+
 
 export default function Home() {
   let projects = [
@@ -8,21 +10,25 @@ export default function Home() {
       id: 1,
       name: "Project 1",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      link: "/about",
     },
     {
       id: 2,
       name: "Project 2",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      link: "/about",
     },
     {
       id: 3,
       name: "Project 3",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      link: "/about",
     },
     {
       id: 4,
       name: "Project 4",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      link: "/about",
     },
   ];
 
@@ -59,7 +65,7 @@ export default function Home() {
               </button>
             </div>
             <div className="py-4">
-              <button className="bg-violet-700 text-xl text-white px-8 py-3 rounded-full hover:scale-105 duration-100">
+              <button className="bg-violet-700 text-xl text-white px-8 py-3 rounded-full hover:scale-105 duration-200">
                 Download CV
               </button>
             </div>
@@ -85,7 +91,8 @@ export default function Home() {
               {projects.map((proj) => (
                 <div
                   key={proj.id}
-                  className="flex flex-col bg-secondary-color text-black w-96 h-128  rounded-xl overflow-hidden m-10"
+                  className="flex flex-col bg-secondary-color text-black w-96 h-128  rounded-xl overflow-hidden m-10 cursor-pointer hover:scale-105 duration-300"
+                  onClick={ () => ( window.open(proj.link) )}
                 >
                   <Image
                     src={projectimg}
@@ -96,7 +103,7 @@ export default function Home() {
                   <div className="h-full flex flex-col justify-between items-center gap-5 p-5">
                     <h1> {proj.name} </h1>
                     <p> {proj.par} </p>
-                    <button className="bg-violet-600 rounded-3xl w-24 py-2 text-white">
+                    <button className="bg-violet-600 rounded-3xl w-24 py-2 text-white ">
                       Visit
                     </button>
                   </div>
