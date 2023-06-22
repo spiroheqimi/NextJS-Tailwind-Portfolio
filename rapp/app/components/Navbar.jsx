@@ -13,8 +13,8 @@ export default function Navbar() {
   let [open,setOpen] = useState(false);
 
   return (
-    <div className="md:px-16 lg:pl-28 xl:pl-36 m-0 px-14 py-6 bg-background-color">
-      <div className=" md:flex items-center justify-between">
+    <div className="z-1 md:px-16 lg:pl-28 xl:pl-36 m-0 px-14 py-6 bg-background-color fixed w-full">
+      <div className="md:flex items-center justify-between">
         <div className="flex justify-between w-full">
           <a href="/" className="md:text-3xl text-2xl text-white cursor-pointer"> Portfolio </a>
           <button className="md:hidden cursor-pointer" onClick={ () => setOpen(!open)  } > 
