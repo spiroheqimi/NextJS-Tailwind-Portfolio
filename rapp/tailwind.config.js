@@ -14,6 +14,12 @@ module.exports = {
       screens:{
         "sm" : "400px"
       },
+      spacing: {
+        '13': '3.25rem',
+        '15': '3.75rem',
+        '128': '30rem',
+        '144': '36rem',
+      }
     },
   },
   plugins: [],
