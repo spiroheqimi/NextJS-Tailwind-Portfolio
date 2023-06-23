@@ -4,12 +4,14 @@
 
 :root {
   --background-color: #121720;
+  --mytext-color: #FFFFFF;
+  --small-text :#000000;
   --secondary-color: #8EA8C3;
 }
 
 
 ion-icon {
-  color: white;
+  color: var(--mytext-color);
   font-size: 40px;
 }
 

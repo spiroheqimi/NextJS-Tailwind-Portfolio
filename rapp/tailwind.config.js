@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         "background-color": "var(--background-color)",
         "secondary-color": "var(--secondary-color)",
+        "mytext-color": "var(--mytext-color)",
+        "small-text": "var(--small-text)",
       },
       screens:{
         "sm" : "400px"
@@ -17,7 +19,8 @@ module.exports = {
       spacing: {
         '13': '3.25rem',
         '15': '3.75rem',
-        '128': '30rem',
+        '90': '22rem',
+        '128': '29rem',
         '144': '36rem',
       }
     },

@@ -16,7 +16,7 @@ export default function Navbar() {
     <div className="z-1 md:px-16 lg:pl-28 xl:pl-36 m-0 px-14 py-6 bg-background-color fixed w-full">
       <div className="md:flex items-center justify-between">
         <div className="flex justify-between w-full">
-          <a href="/" className="md:text-3xl text-2xl text-white cursor-pointer"> Portfolio </a>
+          <a href="/" className="md:text-3xl text-2xl text-mytext-color cursor-pointer"> Portfolio </a>
           <button className="md:hidden cursor-pointer" onClick={ () => setOpen(!open)  } > 
           <ion-icon size="large" name={ open ? "close-outline" : "menu-outline" }></ion-icon>
           </button>
@@ -25,7 +25,7 @@ export default function Navbar() {
         <ul className={`md:flex md:items-center md:opacity-100 h-auto duration-300 ease-in ${ open ? 'visible' : 'hidden' }  `}>
           {Links.map((link) => (
             <li key={link.name} className="lg:ml-8 text-lg h-auto md:my-0 my-5 ">
-              <a href={link.link} className=" text-white hover:text-gray-500 md:px-3">{link.name}</a>
+              <a href={link.link} className=" text-mytext-color hover:text-gray-500 md:px-3">{link.name}</a>
             </li>
           ))}
         </ul>
