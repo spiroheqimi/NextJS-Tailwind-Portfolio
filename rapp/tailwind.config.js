@@ -14,6 +14,7 @@ module.exports = {
         "small-text": "var(--small-text)",
       },
       screens:{
+        "xs" : "10px",
         "sm" : "400px"
       },
       spacing: {
@@ -21,7 +22,7 @@ module.exports = {
         '15': '3.75rem',
         '90': '22rem',
         '128': '29rem',
-        '144': '36rem',
+        '144': '31rem',
       }
     },
   },

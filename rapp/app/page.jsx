@@ -39,37 +39,11 @@ export default function Home() {
     },
   ];
 
-  let [open,setOpen] = useState(false);
-
-  let change = () =>  {
-
-    setOpen(!open)
-
-    if ( open === true ){
-      document.documentElement.style.setProperty('--background-color', '#121720')
-      document.documentElement.style.setProperty('--mytext-color', '#ffffff')
-      document.documentElement.style.setProperty('--small-text', '#000000')
-    } else {
-      document.documentElement.style.setProperty('--background-color', '#fff')
-      document.documentElement.style.setProperty('--mytext-color', '#000000')
-      document.documentElement.style.setProperty('--small-text', '#ffffff')
-    }
-  }
-
-  /* open ?  document.documentElement.style.setProperty('--background-color', '#121720') : document.documentElement.style.setProperty('--background-color', '#fff'); */
+  let open = useState(false);
 
   return (
     <>
-    
       <main className="top-0 w-screen h-screen overflow-hidden bg-background-color">
-        <div className="flex justify-end bg-background-color py-2 px-20 pt-20 text-mytext-color">
-          <button 
-            className="fixed visible"  
-            onClick={ () => change() }> 
-            <ion-icon name={ open ? "moon-outline" : "sunny-outline" }></ion-icon> 
-          </button>
-        </div>
-
         <div className="flex mx-14 my-10 lg:px-10 xl:px-20 xl:pt-40 lg:pt-36 sm:pt-36">
           <div className="xl:w-3/5 w-full flex flex-col justify-center text-left text-mytext-color lg:pl-2 ">
             <h1 className="md:text-2xl text-lg"> Hello, My name is Spiro </h1>
@@ -85,7 +59,7 @@ export default function Home() {
               numquam laborum alias molestiae.
             </p>
 
-            <div className="flex items-start gap-5 py-4">
+            <div className="z-0 flex items-start gap-5 py-4">
               
               <button >
                 <Link href="https://github.com/spiroheqimi">
@@ -102,7 +76,7 @@ export default function Home() {
             </div>
 
             <div className="py-4">
-              <button className="bg-violet-700 text-xl text-mytext-color px-8 py-3 rounded-full hover:scale-105 duration-200">
+              <button className="bg-violet-700 text-xl text-white px-8 py-3 rounded-full hover:scale-105 duration-200">
                 Download CV
               </button>
             </div>
@@ -159,9 +133,11 @@ export default function Home() {
 }
 
 /*
- * Breakpoints - Done /ish
- * Dark mode toggle
- * I want to add programming languages
+ * no light theme for mobile
+ * Breakpoints - Done 
+ * Email form 
+ * Add local storage for the light/dark theme
+ * I want to add programming languages 
  * I want to add project cards
  * Download CV button needs onclick donwload
  * I want to add a button "View more" and it will show the rest of the projects if any | maybe i need Promises for that 
