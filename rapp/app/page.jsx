@@ -82,7 +82,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center xl:w-2/5 max-xl:hidden xl:mx-10">
-
+ 
             <Image
               className="rounded-xl "
               src={projectimg}
