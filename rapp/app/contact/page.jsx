@@ -30,13 +30,13 @@ export default function page() {
           <form action="/" method="post" >
             <div className="w-144 flex flex-col space-y-5">
               <label htmlFor="" className="text-mytext-color text-xl"> Name </label>
-              <input type="text" className="py-2 rounded-lg border-4 border-black" required/>
+              <input type="text" className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color" required/>
               <label htmlFor="" className="text-mytext-color text-xl"> Email  </label>
-              <input type="text" className="py-2 rounded-lg border-4 border-black" required/>
+              <input type="text" className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color" required/>
               <label htmlFor="" className="text-mytext-color text-xl"> Message </label>
-              <textarea name="" className="py-2 rounded-lg border-4 border-black" id="" cols="30" rows="6"> </textarea>
+              <textarea name="" className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color" id="" cols="30" rows="6"> </textarea>
             </div>
-            <button type="submit" className="bg-violet-800 my-8 px-6 py-3 rounded-3xl text-white"> Submit </button>
+            <button type="submit" className="bg-violet-700 my-8 px-6 py-3 rounded-3xl text-white hover:scale-105 "> Submit </button>
           </form>
         </div>
       </div>

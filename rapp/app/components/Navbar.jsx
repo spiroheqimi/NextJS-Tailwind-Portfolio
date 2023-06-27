@@ -22,10 +22,12 @@ export default function Navbar() {
       document.documentElement.style.setProperty('--background-color', '#121720')
       document.documentElement.style.setProperty('--mytext-color', '#ffffff')
       document.documentElement.style.setProperty('--small-text', '#000000')
+      document.documentElement.style.setProperty('--cards-color', '#21262D')
     } else {
       document.documentElement.style.setProperty('--background-color', '#fff')
       document.documentElement.style.setProperty('--mytext-color', '#000000')
       document.documentElement.style.setProperty('--small-text', '#ffffff')
+      document.documentElement.style.setProperty('--cards-color', '#ffffff')
     }
   }
 

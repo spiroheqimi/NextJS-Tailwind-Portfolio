@@ -12,6 +12,7 @@ module.exports = {
         "secondary-color": "var(--secondary-color)",
         "mytext-color": "var(--mytext-color)",
         "small-text": "var(--small-text)",
+        "cards-color": "var(--cards-color)",
       },
       screens:{
         "xs" : "10px",

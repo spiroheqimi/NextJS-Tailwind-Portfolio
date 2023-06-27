@@ -39,12 +39,10 @@ export default function Home() {
     },
   ];
 
-  let open = useState(false);
-
   return (
     <>
       <main className="top-0 w-screen h-screen overflow-hidden bg-background-color">
-        <div className="flex mx-14 my-10 lg:px-10 xl:px-20 xl:pt-40 lg:pt-36 sm:pt-36">
+        <div className="flex mx-14 my-10 lg:px-10 xl:px-20 xl:pt-48 lg:pt-36 sm:pt-36">
           <div className="xl:w-3/5 w-full flex flex-col justify-center text-left text-mytext-color lg:pl-2 ">
             <h1 className="md:text-2xl text-lg"> Hello, My name is Spiro </h1>
             <h1 className="md:text-3xl text-xl">
@@ -76,7 +74,7 @@ export default function Home() {
             </div>
 
             <div className="py-4">
-              <button className="bg-violet-700 text-xl text-white px-8 py-3 rounded-full hover:scale-105 duration-200">
+              <button className="bg-violet-700 text-xl text-white px-8 py-3 rounded-full hover:scale-105 duration-100">
                 Download CV
               </button>
             </div>
@@ -106,7 +104,7 @@ export default function Home() {
 
                 <div
                   key={proj.id}
-                  className={`flex flex-col ${ open ? "bg-slate-800" : "bg-secondary-color" } text-small-text w-90 h-128 rounded-2xl overflow-hidden m-10 cursor-pointer hover:shadow-lg hover:shadow-violet-900 duration-300`}
+                  className={`flex flex-col bg-cards-color text-mytext-color shadow-lg shadow-slate-900 w-90 h-128 rounded-2xl overflow-hidden m-10 cursor-pointer hover:shadow-lg hover:shadow-violet-700 duration-300`}
                   onClick={ () => ( window.open(proj.link) )}
                 >
 
@@ -117,9 +115,9 @@ export default function Home() {
                     alt={proj.name}
                   />
 
-                  <div className="h-full flex flex-col justify-start items-center gap-4 px-7 py-3">
+                  <div className="h-full flex flex-col justify-start items-center gap-4 px-7 py-6">
                     <h1 className="text-2xl"> {proj.name} </h1>
-                    <p> {proj.par} </p>
+                    <p className="text-center"> {proj.par} </p>
                   </div>
 
                 </div>
