@@ -8,13 +8,29 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Data", name, email, message);
+
+    try {
+
+      const res = await fetch('/api/contact' ,{
+        method: 'POST',
+        body: JSON.stringify({
+          name,email,message,
+        }),
+        headers: {
+          'Content-Type' : 'application/json',
+        },
+      })
+      
+    } catch (error) {
+      console.log( "Error : ",error)
+    }
+
   };
 
   return (
-    <form action="/" method="post" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div className="w-144 flex flex-col space-y-5">
         <label htmlFor="name" className="text-mytext-color text-xl">
           Name
@@ -23,6 +39,7 @@ export default function ContactForm() {
           value={name}
           onChange={ (e) => setName(e.target.value) }
           type="text"
+          pattern="[a-z0-9]{1,15}"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
           required
         />

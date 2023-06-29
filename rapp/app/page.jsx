@@ -130,19 +130,3 @@ export default function Home() {
   );
 }
 
-/*
- * no light theme for mobile
- * Breakpoints - Done 
- * Email form | I need to add the API
- * Add local storage for the light/dark theme
- * I want to add programming languages 
- * I want to add project cards
- * Download CV button needs onclick donwload 
- * I want to add a button "View more" and it will show the rest of the projects if any | maybe i need Promises for that 
- * Contant Form | Not necessary but I want to know the functionality
- * Project 1 Login/Register | Can try database just to know how to connect stuff
- * Project 2 more into responsive/animations 
- * 
- * 
- * flex mx-14 my-10 lg:px-10 xl:px-20 lg:pt-28 pt-12  | spacing
- */
