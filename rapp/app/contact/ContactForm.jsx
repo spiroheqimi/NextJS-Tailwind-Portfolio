@@ -1,32 +1,31 @@
 "use client";
 
-import { useState } from "react";
-
 export default function ContactForm() {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  async function handleSubmit(event) {
 
-  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-
-      const res = await fetch('/api/contact' ,{
-        method: 'POST',
-        body: JSON.stringify({
-          name,email,message,
-        }),
-        headers: {
-          'Content-Type' : 'application/json',
-        },
-      })
-      
-    } catch (error) {
-      console.log( "Error : ",error)
+    const data = {
+      name: String(event.target.name.value),
+      email: String(event.target.email.value),
+      message: String(event.target.message.value),
     }
 
+    const response = await fetch("/api/contact", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+    
+      if(response.ok){
+        console.log("Message Sent")
+      }
+      if(!response.ok){
+        console.log("Message Failed")
+      }
   };
 
   return (
@@ -36,10 +35,9 @@ export default function ContactForm() {
           Name
         </label>
         <input
-          value={name}
-          onChange={ (e) => setName(e.target.value) }
+          id="name"
           type="text"
-          pattern="[a-z0-9]{1,15}"
+          pattern="[a-zA-Z0-9]{1,15}"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
           required
         />
@@ -47,8 +45,7 @@ export default function ContactForm() {
           Email
         </label>
         <input
-          value={email}
-          onChange={ (e) => setEmail(e.target.value) }
+          id="email"
           type="text"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
           required
@@ -57,10 +54,8 @@ export default function ContactForm() {
           Message
         </label>
         <textarea
-          value={message}
-          onChange={ (e) => setMessage(e.target.value) }
+          name="message"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
-          cols="30"
           rows="6"
         ></textarea>
       </div>
