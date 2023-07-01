@@ -21,7 +21,7 @@ export default function page() {
               <Link href="https://www.linkedin.com/in/spiro-heqimi-b80295236/">
                  <ion-icon name="logo-linkedin"></ion-icon>
                </Link>
-             </button>
+            </button>
 
             </div>
         </div>

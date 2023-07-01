@@ -13,19 +13,14 @@ export default function ContactForm() {
     }
 
     const response = await fetch("/api/contact", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		});
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
     
-      if(response.ok){
-        console.log("Message Sent")
-      }
-      if(!response.ok){
-        console.log("Message Failed")
-      }
+    
   };
 
   return (
@@ -38,6 +33,7 @@ export default function ContactForm() {
           id="name"
           type="text"
           pattern="[a-zA-Z0-9]{1,15}"
+          autoComplete="off"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
           required
         />
@@ -48,12 +44,14 @@ export default function ContactForm() {
           id="email"
           type="text"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
+          autoComplete="off"
           required
         />
         <label htmlFor="message" className="text-mytext-color text-xl">
           Message
         </label>
         <textarea
+          id="message"
           name="message"
           className="py-2 px-3 rounded-lg border-2 outline-none border-mytext-color"
           rows="6"

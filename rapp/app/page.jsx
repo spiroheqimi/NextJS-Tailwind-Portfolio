@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 import projectimg from "./public/project-img.jpg";
@@ -11,31 +11,31 @@ export default function Home() {
       id: 1,
       name: "Project 1",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/about",
+      link: "/About",
     },
     {
       id: 2,
       name: "Project 2",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/about",
+      link: "/About",
     },
     {
       id: 3,
       name: "Project 3",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/about",
+      link: "/About",
     },
     {
       id: 4,
       name: "Project 4",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/about",
+      link: "/About",
     },
     {
       id: 5,
       name: "Project 5",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/about",
+      link: "/About",
     },
   ];
 

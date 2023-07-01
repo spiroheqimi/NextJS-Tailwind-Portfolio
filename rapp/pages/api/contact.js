@@ -1,10 +1,10 @@
-import nodemailer from "nodemailer"
+
+
+const user = process.env.user;
 
 export default async function ContactAPI(req, res) {
 
   const { name, email, message } = req.body
-
-  const user = process.env.user;
 
   const data = {
     name, email, message
@@ -12,7 +12,7 @@ export default async function ContactAPI(req, res) {
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 3000,
+    port: 465,
     secure: true,
     auth: {
       user: user,
@@ -24,7 +24,7 @@ export default async function ContactAPI(req, res) {
     
     const mail = await transporter.sendMail({
       from: user,
-      to: "spiroheqimi92@gmail.com",
+      to: "spiroheqimi90@gmail.com",
       subject: `Contact from ${name}`,
       html: `
         <p>Name: ${name} </p>
@@ -33,7 +33,7 @@ export default async function ContactAPI(req, res) {
       `,
     })
 
-    console.log("Message Sent")
+    console.log(mail.messageId)
 
     res.status(200).json({ message: 'success' })
   } catch (error) {
