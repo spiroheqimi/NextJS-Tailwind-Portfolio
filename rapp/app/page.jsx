@@ -10,32 +10,35 @@ export default function Home() {
     {
       id: 1,
       name: "Project 1",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/About",
+      par: "Sign in / Sign up Validation ",
+      status: "Comming Soon",
+      link: "/projects",
     },
     {
       id: 2,
       name: "Project 2",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/About",
+      par: `E-commerce website`,
+      status: "Comming Soon",
+      link: "/projects",
     },
     {
       id: 3,
       name: "Project 3",
-      par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/About",
+      par: "Weather App",
+      status: "Comming Soon",
+      link: "/projects",
     },
     {
       id: 4,
       name: "Project 4",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/About",
+      link: "/projects",
     },
     {
       id: 5,
       name: "Project 5",
       par: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      link: "/About",
+      link: "/projects",
     },
   ];
 
@@ -74,9 +77,11 @@ export default function Home() {
             </div>
 
             <div className="py-4">
+              <a href="rapp/app/public/SpiroHeqimiresume.pdf" download>
               <button className="bg-violet-700 text-xl text-white px-8 py-3 rounded-full hover:scale-105 duration-100">
                 Download CV
               </button>
+              </a>
             </div>
 
           </div>
@@ -98,7 +103,7 @@ export default function Home() {
       <section className="top-0 w-screen h-full overflow-hidden bg-background-color">
         <div className="flex mx-14 my-10 lg:px-10 xl:px-20">
           <div className="w-full flex flex-col items-center justify-start text-mytext-color ">
-            <h1 className="md:text-2xl text-lg top-0"> My Projects </h1>
+            <h1 className="md:text-2xl text-lg top-0"> My Project </h1>
             <div className="h-full w-full flex flex-wrap justify-center pt-16">
               {projects.map((proj) => (
 
@@ -118,6 +123,7 @@ export default function Home() {
                   <div className="h-full flex flex-col justify-start items-center gap-4 px-7 py-6">
                     <h1 className="text-2xl"> {proj.name} </h1>
                     <p className="text-center"> {proj.par} </p>
+                    <p className="text-center pt-10"> {proj.status} </p>
                   </div>
 
                 </div>
