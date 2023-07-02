@@ -3,13 +3,12 @@
 export default function ContactForm() {
 
   async function handleSubmit(event) {
-
     event.preventDefault();
 
     const data = {
-      name: String(event.target.name.value),
-      email: String(event.target.email.value),
-      message: String(event.target.message.value),
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
     }
 
     const response = await fetch("/api/contact", {

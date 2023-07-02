@@ -1,4 +1,4 @@
-
+import nodemailer from 'nodemailer'
 
 const user = process.env.user;
 
@@ -24,23 +24,20 @@ export default async function ContactAPI(req, res) {
     
     const mail = await transporter.sendMail({
       from: user,
-      to: "spiroheqimi90@gmail.com",
+      to: "spiroheqimi92@gmail.com",
       subject: `Contact from ${name}`,
       html: `
         <p>Name: ${name} </p>
         <p>Email: ${email} </p>
         <p>Message: ${message} </p>
       `,
-    })
-
-    console.log(mail.messageId)
-
+    });
     res.status(200).json({ message: 'success' })
   } catch (error) {
     console.log(error);
     res.status(500).json({
       message: "Could not send the mail"
-    })
+    });
   }
 
   
